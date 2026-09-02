@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gerenciar Farms | Worldcraft001</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0f14;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #101820;
+      border-bottom: 1px solid #26313d;
+      padding: 18px 6%;
+    }
+
+    .topbar {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #55d66b;
+    }
+
+    .back {
+      color: #55d66b;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+
+    .title h1 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .title p {
+      color: #9da8b2;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #55d66b;
+      color: #071009;
+      padding: 13px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .farms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .farm {
+      background: #121922;
+      border: 1px solid #26313d;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .farm h2 {
+      margin-bottom: 8px;
+    }
+
+    .farm p {
+      color: #9da8b2;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .farm-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .edit,
+    .delete {
+      flex: 1;
+      padding: 10px;
+      border-radius: 7px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .edit {
+      background: #1b2935;
+      color: #fff;
+      border: 1px solid #344454;
+    }
+
+    .delete {
+      background: #24171a;
+      color: #ff8b8b;
+      border: 1px solid #513035;
+    }
+
+    .notice {
+      margin-top: 30px;
+      padding: 18px;
+      background: #101820;
+      border: 1px solid #26313d;
+      border-radius: 10px;
+      color: #9da8b2;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #78838e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .actions {
+        justify-content: stretch;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="topbar">
+
+      <div class="logo">
+        Worldcraft<span>001</span> Admin
+      </div>
+
+      <a class="back" href="admin.html">
+        ← Voltar ao painel
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <div class="title">
+      <h1>🌾 Gerenciar Farms</h1>
+      <p>Cria, edita e organiza as farms do Worldcraft001.</p>
+    </div>
+
+    <div class="actions">
+      <a class="button" href="publicar.html">
+        ➕ Nova Farm
+      </a>
+    </div>
+
+    <div class="farms">
+
+      <div class="farm">
+        <div class="icon">⛓️</div>
+        <h2>Farm de Ferro</h2>
+        <p>
+          Farm automática para produzir ferro no Minecraft Bedrock.
+        </p>
+
+        <div class="farm-actions">
+          <button class="edit" onclick="editar('Farm de Ferro')">
+            ✏️ Editar
+          </button>
+
+          <button class="delete" onclick="eliminar('Farm de Ferro')">
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+
+      <div class="farm">
+        <div class="icon">🍖</div>
+        <h2>Farm de Comida</h2>
+        <p>
+          Produção automática de alimentos para sobrevivência.
+        </p>
+
+        <div class="farm-actions">
+          <button class="edit" onclick="editar('Farm de Comida')">
+            ✏️ Editar
+          </button>
+
+          <button class="delete" onclick="eliminar('Farm de Comida')">
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+
+      <div class="farm">
+        <div class="icon">✨</div>
+        <h2>Farm de XP</h2>
+        <p>
+          Uma farm dedicada à obtenção de experiência.
+        </p>
+
+        <div class="farm-actions">
+          <button class="edit" onclick="editar('Farm de XP')">
+            ✏️ Editar
+          </button>
+
+          <button class="delete" onclick="eliminar('Farm de XP')">
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+
+      <div class="farm">
+        <div class="icon">🪙</div>
+        <h2>Farm de Ouro</h2>
+        <p>
+          Produção de ouro para diferentes projetos e necessidades.
+        </p>
+
+        <div class="farm-actions">
+          <button class="edit" onclick="editar('Farm de Ouro')">
+            ✏️ Editar
+          </button>
+
+          <button class="delete" onclick="eliminar('Farm de Ouro')">
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+
+      <div class="farm">
+        <div class="icon">🌲</div>
+        <h2>Farm de Madeira</h2>
+        <p>
+          Recursos de madeira para construções e sobrevivência.
+        </p>
+
+        <div class="farm-actions">
+          <button class="edit" onclick="editar('Farm de Madeira')">
+            ✏️ Editar
+          </button>
+
+          <button class="delete" onclick="eliminar('Farm de Madeira')">
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+
+      <div class="farm">
+        <div class="icon">📦</div>
+        <h2>Farm de Itens</h2>
+        <p>
+          Sistemas para automatizar a obtenção de diferentes itens.
+        </p>
+
+        <div class="farm-actions">
+          <button class="edit" onclick="editar('Farm de Itens')">
+            ✏️ Editar
+          </button>
+
+          <button class="delete" onclick="eliminar('Farm de Itens')">
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notice">
+      🔒 Esta página é apenas a interface administrativa.
+      Os dados reais das farms serão armazenados no backend quando
+      configurarmos o sistema.
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Worldcraft001 — Área administrativa
+  </footer>
+
+  <script>
+    function editar(nome) {
+      alert(
+        "A edição de \"" + nome +
+        "\" será ativada quando o sistema de armazenamento estiver configurado."
+      );
+    }
+
+    function eliminar(nome) {
+      const confirmar = confirm(
+        "Queres realmente eliminar \"" + nome + "\"?"
+      );
+
+      if (confirmar) {
+        alert(
+          "A eliminação real será ativada quando o backend estiver configurado."
+        );
+      }
+    }
+  </script>
+
+</body>
+</html>0
+
