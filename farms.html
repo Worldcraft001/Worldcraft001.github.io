@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Farms Minecraft Bedrock | Worldcraft001</title>
+  <meta name="description" content="Farms para Minecraft Bedrock: farms de ferro, comida, XP, ouro e outros recursos.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0f14;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 20, 0.96);
+      border-bottom: 1px solid #26313d;
+      padding: 15px 6%;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #55d66b;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #55d66b;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px 70px;
+      background:
+        linear-gradient(rgba(11,15,20,.7), rgba(11,15,20,.95)),
+        radial-gradient(circle at center, #214d2b, #0b0f14 65%);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 9vw, 70px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #55d66b;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #b9c2ca;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .intro h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      color: #9da8b2;
+    }
+
+    .farms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .farm-card {
+      background: #121922;
+      border: 1px solid #26313d;
+      border-radius: 12px;
+      padding: 25px;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .farm-card:hover {
+      transform: translateY(-5px);
+      border-color: #55d66b;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .farm-card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .farm-card p {
+      color: #9da8b2;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 5px;
+      background: #1b2a20;
+      color: #70df82;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .notice {
+      margin-top: 45px;
+      padding: 22px;
+      background: #101820;
+      border: 1px solid #26313d;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .notice p {
+      color: #aeb8c1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #78838e;
+      font-size: 14px;
+      border-top: 1px solid #26313d;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav a {
+        margin: 0 6px;
+      }
+
+      .hero {
+        padding: 70px 20px 55px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        Worldcraft<span>001</span>
+      </div>
+
+      <div>
+        <a href="index.html">Início</a>
+        <a href="farms.html">Farms</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#comunidade">Comunidade</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>FARMS <span>MINECRAFT</span></h1>
+
+    <p>
+      Guias e ideias de farms para Minecraft Bedrock.
+      Encontra formas eficientes de conseguir recursos.
+    </p>
+  </section>
+
+  <main>
+
+    <div class="intro">
+      <h2>Farms disponíveis</h2>
+
+      <p>
+        Escolhe uma farm para conhecer os materiais,
+        funcionamento e instruções de construção.
+      </p>
+    </div>
+
+    <div class="farms">
+
+      <article class="farm-card">
+        <div class="icon">⚙️</div>
+        <h3>Farm de Ferro</h3>
+        <p>
+          Produz ferro automaticamente para ferramentas,
+          armaduras, trilhos e outros projetos.
+        </p>
+        <span class="tag">BEDROCK</span>
+      </article>
+
+      <article class="farm-card">
+        <div class="icon">🍖</div>
+        <h3>Farm de Comida</h3>
+        <p>
+          Uma forma prática de produzir comida
+          para manter a sobrevivência.
+        </p>
+        <span class="tag">SOBREVIVÊNCIA</span>
+      </article>
+
+      <article class="farm-card">
+        <div class="icon">✨</div>
+        <h3>Farm de XP</h3>
+        <p>
+          Consigue experiência para encantar ferramentas,
+          armas e armaduras.
+        </p>
+        <span class="tag">XP</span>
+      </article>
+
+      <article class="farm-card">
+        <div class="icon">🟨</div>
+        <h3>Farm de Ouro</h3>
+        <p>
+          Produz ouro e outros recursos úteis
+          para diferentes projetos.
+        </p>
+        <span class="tag">RECURSOS</span>
+      </article>
+
+      <article class="farm-card">
+        <div class="icon">🌳</div>
+        <h3>Farm de Madeira</h3>
+        <p>
+          Facilita a produção de madeira para
+          construções e fabricação de itens.
+        </p>
+        <span class="tag">CONSTRUÇÃO</span>
+      </article>
+
+      <article class="farm-card">
+        <div class="icon">📦</div>
+        <h3>Farm de Itens</h3>
+        <p>
+          Sistemas automáticos para coletar
+          diferentes tipos de itens.
+        </p>
+        <span class="tag">AUTOMÁTICA</span>
+      </article>
+
+    </div>
+
+    <div class="notice">
+      <p>
+        🚧 Mais farms e tutoriais detalhados serão adicionados em breve.
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Worldcraft001 — Farms e tutoriais de Minecraft.
+  </footer>
+
+</body>
+</html>0
+
