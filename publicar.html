@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nova publicação | Worldcraft001</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0f14;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #101820;
+      border-bottom: 1px solid #26313d;
+      padding: 18px 6%;
+    }
+
+    .topbar {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #55d66b;
+    }
+
+    .back {
+      color: #55d66b;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+
+    .title h1 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .title p {
+      color: #9da8b2;
+    }
+
+    .form-box {
+      background: #121922;
+      border: 1px solid #26313d;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px;
+      background: #0b0f14;
+      color: #fff;
+      border: 1px solid #26313d;
+      border-radius: 8px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #55d66b;
+    }
+
+    .file-box {
+      border: 1px dashed #3b4855;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .file-box p {
+      color: #9da8b2;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    input[type="file"] {
+      border: none;
+      padding: 0;
+      background: transparent;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #0b0f14;
+      border: 1px solid #26313d;
+      padding: 14px;
+      border-radius: 8px;
+    }
+
+    .check input {
+      width: auto;
+    }
+
+    .check label {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #55d66b;
+      color: #071009;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 15px;
+      background: #101820;
+      border: 1px solid #26313d;
+      border-radius: 8px;
+      color: #9da8b2;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #78838e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-box {
+        padding: 20px;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="topbar">
+
+      <div class="logo">
+        Worldcraft<span>001</span> Admin
+      </div>
+
+      <a class="back" href="admin.html">
+        ← Voltar ao painel
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <div class="title">
+      <h1>➕ Nova publicação</h1>
+      <p>Cria uma nova publicação para os visitantes do Worldcraft001.</p>
+    </div>
+
+    <form class="form-box" id="publishForm">
+
+      <div class="field">
+        <label for="title">Título</label>
+
+        <input
+          type="text"
+          id="title"
+          placeholder="Ex.: Farm de Ferro Automática"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label for="description">Descrição</label>
+
+        <textarea
+          id="description"
+          placeholder="Escreve uma descrição para esta publicação..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="options">
+
+        <div class="field">
+          <label for="type">Tipo de conteúdo</label>
+
+          <select id="type" required>
+            <option value="">Selecionar</option>
+            <option>Imagem</option>
+            <option>Vídeo</option>
+            <option>Áudio</option>
+            <option>PDF</option>
+            <option>Download</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="category">Categoria</label>
+
+          <select id="category" required>
+            <option value="">Selecionar</option>
+            <option>Farms</option>
+            <option>Tutoriais</option>
+            <option>Construções</option>
+            <option>Minecraft</option>
+            <option>Notícias</option>
+            <option>Outros</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="field">
+
+        <label>Ficheiro</label>
+
+        <div class="file-box">
+
+          <p>
+            Seleciona o ficheiro que será associado à publicação.
+          </p>
+
+          <input type="file" id="file">
+
+        </div>
+
+      </div>
+
+      <div class="field">
+
+        <label for="tags">Tags</label>
+
+        <input
+          type="text"
+          id="tags"
+          placeholder="minecraft, bedrock, farm, ferro"
+        >
+
+      </div>
+
+      <div class="options">
+
+        <div class="check">
+          <input type="checkbox" id="comments" checked>
+          <label for="comments">Permitir comentários</label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="downloads" checked>
+          <label for="downloads">Permitir downloads</label>
+        </div>
+
+      </div>
+
+      <button type="submit">
+        Publicar conteúdo
+      </button>
+
+      <div class="notice">
+        🔒 O armazenamento e a publicação real dos ficheiros serão
+        ligados ao backend posteriormente.
+      </div>
+
+    </form>
+
+  </main>
+
+  <footer>
+    © 2026 Worldcraft001 — Área administrativa
+  </footer>
+
+  <script>
+    document.getElementById("publishForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      alert(
+        "A interface está pronta. O sistema de armazenamento ainda será configurado."
+      );
+    });
+  </script>
+
+</body>
+</html>0
+
