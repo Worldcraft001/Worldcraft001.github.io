@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | Worldcraft001</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0f14;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      background: #121922;
+      border: 1px solid #26313d;
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.35);
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .logo span {
+      color: #55d66b;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      text-align: center;
+      color: #9da8b2;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 18px;
+      background: #0b0f14;
+      color: #fff;
+      border: 1px solid #26313d;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #55d66b;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      background: #55d66b;
+      color: #071009;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 22px;
+      color: #9da8b2;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: #55d66b;
+    }
+
+    .warning {
+      margin-top: 22px;
+      padding: 12px;
+      border: 1px solid #26313d;
+      border-radius: 8px;
+      color: #9da8b2;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="logo">
+      Worldcraft<span>001</span>
+    </div>
+
+    <h1>Área Administrativa</h1>
+
+    <p class="description">
+      Acesso exclusivo ao administrador.
+    </p>
+
+    <form id="loginForm">
+
+      <label for="email">E-mail</label>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="admin@exemplo.com"
+        required
+      >
+
+      <label for="password">Palavra-passe</label>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="A tua palavra-passe"
+        required
+      >
+
+      <button type="submit">
+        Entrar
+      </button>
+
+    </form>
+
+    <a class="back" href="index.html">
+      ← Voltar ao site
+    </a>
+
+    <div class="warning">
+      🔒 A autenticação será ligada a um serviço seguro.
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      alert("O sistema de autenticação ainda não foi configurado.");
+    });
+  </script>
+
+</body>
+</html>0
+
